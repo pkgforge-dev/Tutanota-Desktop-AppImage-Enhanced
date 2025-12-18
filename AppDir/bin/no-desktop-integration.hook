@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/sh
 
 mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/tuta_integration"
 echo "$APPIMAGE" > "${XDG_CONFIG_HOME:-$HOME/.config}/tuta_integration/no_integration"

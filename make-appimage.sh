@@ -13,7 +13,8 @@ export DEPLOY_OPENGL=1
 export DEPLOY_VULKAN=1
 
 # Deploy dependencies
-quick-sharun ./AppDir/bin/*
+quick-sharun ./AppDir/bin/* \
+             /usr/lib/libsecret*
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage

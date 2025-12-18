@@ -45,7 +45,7 @@ echo "$VERSION" > ~/version
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm nspr
+pacman -Syu --noconfirm nspr nss
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"

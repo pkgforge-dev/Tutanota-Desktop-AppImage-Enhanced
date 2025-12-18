@@ -3,8 +3,7 @@
 set -eu
 
 ARCH=$(uname -m)
-VERSION=$(pacman -Q tutanota-desktop | awk '{print $2; exit}')
-VERSION=${VERSION#*:}
+VERSION=$(cat ~/version)
 export ARCH VERSION
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"

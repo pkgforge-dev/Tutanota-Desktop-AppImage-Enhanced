@@ -14,17 +14,17 @@ TAR_LINK=$(curl -s https://api.github.com/repos/tutao/tutanota/releases |
            grep -oP '"browser_download_url": "\K[^"]*\.tar\.gz' |
            head -n 1)
 
-if ! wget --retry-connrefused --tries=30 "$TAR_LINK" -O /tmp/tuta.tar.gz 2>/tmp/download.log; then
+if ! wget --retry-connrefused --tries=30 "$TAR_LINK" -O ./tuta.tar.gz 2>/tmp/download.log; then
 	cat /tmp/download.log
 	exit 1
 fi
 
-tar -xvf /tmp/tuta.tar.gz
-rm -f /tmp/tuta.tar.gz
+tar -xvf ./tuta.tar.gz
+rm -f ./tuta.tar.gz
 
 mkdir -p ./AppDir/bin
-cp -rv /tmp/linux-unpacked/* ./AppDir/bin/
-cp -v /tmp/linux-unpacked/resources/icons/icon/512.png ./AppDir/.DirIcon
+cp -rv ./linux-unpacked/* ./AppDir/bin/
+cp -v ./linux-unpacked/resources/icons/icon/512.png ./AppDir/.DirIcon
 
 cat << 'EOF' > ./AppDir/tutanota-desktop.desktop
 [Desktop Entry]

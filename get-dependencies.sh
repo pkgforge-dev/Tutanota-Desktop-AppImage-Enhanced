@@ -14,6 +14,8 @@ TAR_LINK=$(curl -s https://api.github.com/repos/tutao/tutanota/releases |
            grep -oP '"browser_download_url": "\K[^"]*\.tar\.gz' |
            head -n 1)
 
+VERSION=$(echo "$TAR_LINK" | grep -oP 'tutanota-desktop-release-\K[^/]+')
+
 if ! wget --retry-connrefused --tries=30 "$TAR_LINK" -O ./tuta.tar.gz 2>/tmp/download.log; then
 	cat /tmp/download.log
 	exit 1
@@ -38,6 +40,8 @@ Comment=The desktop client for Tutanota, the secure e-mail service.
 MimeType=x-scheme-handler/mailto;
 Categories=Network;
 EOF
+
+echo "$VERSION" > ~/version
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"

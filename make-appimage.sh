@@ -14,6 +14,7 @@ export DEPLOY_VULKAN=1
 # Deploy dependencies
 quick-sharun ./AppDir/bin/* \
              /usr/lib/libsecret*
+quick-sharun ./AppDir/bin/tutanota-desktop -- '--no-sandbox'
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage

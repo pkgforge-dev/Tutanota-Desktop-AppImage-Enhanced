@@ -13,7 +13,6 @@ export DEPLOY_VULKAN=1
 
 # Deploy dependencies
 quick-sharun ./AppDir/bin/* \
-             /usr/bin/ldd   \
              /usr/lib/libsecret*
 
 # This is hardcoded to look into /usr/bin/ldd and causes a crash

@@ -27,6 +27,7 @@ rm -f ./tuta.tar.gz
 mkdir -p ./AppDir/bin
 cp -rv ./linux-unpacked/* ./AppDir/bin/
 cp -v ./linux-unpacked/resources/icons/icon/512.png ./AppDir/.DirIcon
+cp -v ./linux-unpacked/resources/icons/icon/512.png ./AppDir/tutanota-desktop.png
 
 cat << 'EOF' > ./AppDir/tutanota-desktop.desktop
 [Desktop Entry]

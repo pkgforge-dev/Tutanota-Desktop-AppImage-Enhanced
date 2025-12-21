@@ -1,13 +1,13 @@
 # Tutanota-Desktop-AppImage-Enhanced 🐧
 
-[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/Tutanota-Desktop-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/Tutanota-Desktop-AppImage/releases/latest)
-[![CI Build Status](https://github.com//pkgforge-dev/Tutanota-Desktop-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/Tutanota-Desktop-AppImage/releases/latest)
+[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/Tutanota-Desktop-AppImage-Enhanced/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/Tutanota-Desktop-AppImage-Enhanced/releases/latest)
+[![CI Build Status](https://github.com//pkgforge-dev/Tutanota-Desktop-AppImage-Enhanced/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/Tutanota-Desktop-AppImage-Enhanced/releases/latest)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/tutao/tutanota/refs/heads/master/resources/desktop-icons/icon/512.png" width="128" />
 </p>
 
-* [Latest Stable Release](https://github.com/pkgforge-dev/Tutanota-Desktop-AppImage/releases/latest)
+* [Latest Stable Release](https://github.com/pkgforge-dev/Tutanota-Desktop-AppImage-Enhanced/releases/latest)
 
 ---
 

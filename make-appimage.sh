@@ -20,3 +20,6 @@ sed -i -e 's|/usr/bin/ldd|/XXX/YYY/ZZZ|g' ./AppDir/bin/resources/app.asar
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
+
+# Test the final app
+quick-sharun --test ./dist/*.AppImage

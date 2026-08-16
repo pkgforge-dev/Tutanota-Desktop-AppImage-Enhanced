@@ -14,10 +14,6 @@ export DEPLOY_VULKAN=1
 quick-sharun ./AppDir/bin/* \
              /usr/lib/libsecret*
 
-# This is hardcoded to look into /usr/bin/ldd and causes a crash
-# looks like we only need to patch this path away, it seems to work without it
-sed -i -e 's|/usr/bin/ldd|/XXX/YYY/ZZZ|g' ./AppDir/bin/resources/app.asar
-
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
 

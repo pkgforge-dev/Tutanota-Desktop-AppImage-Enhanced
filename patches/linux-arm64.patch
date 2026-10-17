@@ -1,0 +1,25 @@
+diff --git a/buildSrc/buildUtils.js b/buildSrc/buildUtils.js
+index 9e2722f159..4ce335dbf6 100644
+--- a/buildSrc/buildUtils.js
++++ b/buildSrc/buildUtils.js
+@@ -108,6 +108,7 @@ export function checkArchitectureIsSupported(platformName, architecture) {
+ 		case "x64":
+ 			return true
+ 		case "arm64":
++			return platformName === "darwin" || platformName === "linux"
+ 		case "universal":
+ 			return platformName === "darwin"
+ 		default:
+diff --git a/src/app-kit/mimimi/make.js b/src/app-kit/mimimi/make.js
+index fe058ece08..54e7b5a7c7 100644
+--- a/src/app-kit/mimimi/make.js
++++ b/src/app-kit/mimimi/make.js
+@@ -22,7 +22,7 @@ function getTargets(platform) {
+ 			usePowerShell()
+ 			return ["x86_64-pc-windows-msvc"]
+ 		case "linux":
+-			return ["x86_64-unknown-linux-gnu"]
++			return [process.arch === "arm64" ? "aarch64-unknown-linux-gnu" : "x86_64-unknown-linux-gnu"]
+ 		case "darwin":
+ 			return ["x86_64-apple-darwin", "aarch64-apple-darwin"]
+ 		case "native":
